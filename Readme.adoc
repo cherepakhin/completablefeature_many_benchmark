@@ -68,7 +68,10 @@ image::doc/simple-500rps.png[]
 https://clck.ru/QhU5F[Результаты yandex-tank]
 
 image::doc/simple-500rps-yatank.png[]
+
 ==== При 500rps на "/simple". С CompletableFeature в executorService = Executors.newFixedThreadPool(100);.
+
+NOTE: Кол-во свободных тредов меньше нужного
 
 image::doc/simple-500rps-100threads.png[]
 
