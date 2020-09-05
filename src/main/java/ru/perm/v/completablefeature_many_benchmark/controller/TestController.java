@@ -10,7 +10,8 @@ import java.util.concurrent.*;
 
 public class TestController {
 
-    ExecutorService executorService = Executors.newCachedThreadPool();
+    ExecutorService executorService = Executors.newFixedThreadPool(100);
+//    ExecutorService executorService = Executors.newCachedThreadPool();
 
     String getContext() {
         return StringUtils.repeat("-", 1000);

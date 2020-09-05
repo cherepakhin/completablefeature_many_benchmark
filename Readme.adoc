@@ -43,13 +43,40 @@
     }
 ----
 
-==== При 500 rps на "/"
+==== При 500 rps на "/" . Без CompletableFeature
 
 image::doc/trivial-500rps.png[]
 
 |===
 |Среднее время ответа (мс) |К-во тредов (шт) |Память (Мб)
->|5000 >|229 >|220
+>|5 000 >|229 >|150
 |===
 
 https://clck.ru/QhDKp[Результаты yandex-tank]
+
+image::doc/trivial-500rps-yatank.png[]
+
+==== При 500rps на "/simple". С CompletableFeature в executorService = Executors.newCachedThreadPool();.
+
+image::doc/simple-500rps.png[]
+
+|===
+|Среднее время ответа (мс) |К-во тредов (шт) |Память (Мб)
+>|1 000 >|847 >|~230
+|===
+
+https://clck.ru/QhU5F[Результаты yandex-tank]
+
+image::doc/simple-500rps-yatank.png[]
+==== При 500rps на "/simple". С CompletableFeature в executorService = Executors.newFixedThreadPool(100);.
+
+image::doc/simple-500rps-100threads.png[]
+
+|===
+|Среднее время ответа (мс) |К-во тредов (шт) |Память (Мб)
+>|>10 000 >|188 >|200-350
+|===
+
+https://clck.ru/QhUKM[Результаты yandex-tank]
+
+image::doc/simple-500rps-100threads-yatank.png[]
