@@ -2,3 +2,25 @@ spring:
   mvc:
     async:
       request-timeout: 3600000
+
+management:
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+    health:
+      show-details: always
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+server:
+  tomcat:
+    threads:
+      max: 500
