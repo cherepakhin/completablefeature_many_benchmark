@@ -95,6 +95,6 @@ image::doc/simple-500rps-100threads-yatank.png[]
 |Кол-во выделяемых сервисом тредов меньше нагрузки (нагрузка 500 rps, а тредов выделено 100) . CompletableFeature executorService = Executors.newFixedThreadPool(100) |>10 000 >|188 >|200-350
 |===
 
-Осталось еще много вопросов. Какие будут результаты, если в реальном проекте использовать кеш? А какие задержки вносит Spring, Kubernetes? Может быть лучшие результаты даст оптимизация сервисов, которые позади REST?
+И все таки насколько ценен CompletableFeature? Может быть лучшие результаты даст кеш или оптимизация сервисов, которые позади REST?
 
 O CompletableFeature https://www.baeldung.com/java-completablefuture
