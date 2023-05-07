@@ -9,6 +9,7 @@
         return StringUtils.repeat("-", 1000);
     }
 
+    // Имитация работы какого-то внешнего сервиса
     void sleep() {
         try {
             TimeUnit.MILLISECONDS.sleep(1000);
